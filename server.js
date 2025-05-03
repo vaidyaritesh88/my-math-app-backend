@@ -18,7 +18,7 @@ app.post('/word-problem', async (req, res) => {
   const { age } = req.body;
 
   try {
-    const prompt = `Generate a fun two-digit word problem in addition or subtraction for a ${age}-year-old. Use words which are appropriate as per the age input by the user. Respond only in this format:
+    const prompt = `Generate a fun two-digit word problem in addition or subtraction for a ${age}-year-old. Use words which are appropriate as per the age input by the user. Try to use the name Ivaan, Iraa, Shriyans, Sameeksha, Shaurya, Adira, Grandpa, Aaji, Aai, Aaba, Mumma, Daddy, Aatya, Sameer kaka, Jui Maushi in the word problems. Respond only in this format:
 Problem: <question>
 Answer: <number>`;
 

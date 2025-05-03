@@ -4,7 +4,6 @@ const express = require('express');
 const cors = require('cors');
 const OpenAI = require('openai');
 require('dotenv').config();
-console.log("🔑 OpenAI API Key Loaded:", process.env.OPENAI_API_KEY);
 
 const app = express();
 app.use(cors());

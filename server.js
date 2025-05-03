@@ -22,13 +22,13 @@ app.post('/word-problem', async (req, res) => {
 Problem: <question>
 Answer: <number>`;
 
-    const completion = await openai.createChatCompletion({
+const completion = await openai.chat.completions.create({
       model: 'gpt-3.5-turbo',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.7,
     });
 
-    const text = completion.data.choices[0].message.content;
+    const text = completion.choices[0].message.content;
     const match = text.match(/Problem:\s*(.*)\nAnswer:\s*(\d+)/i);
 
     if (!match) {
